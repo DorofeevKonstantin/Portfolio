@@ -1,0 +1,28 @@
+﻿<Window x:Class="NewVoskTest.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NewVoskTest"
+        mc:Ignorable="d"
+        Title="Новая версия Vosk"
+        WindowStartupLocation="CenterScreen"
+        WindowState="Maximized"
+        FontSize="18">
+    <Grid>
+        <DockPanel Margin="10,10,10,10">
+            <StackPanel Orientation="Vertical">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Выберите микрофон" HorizontalAlignment="Center" Margin="5,5,5,5"/>
+                    <CheckBox Content="Partial" VerticalAlignment="Center" VerticalContentAlignment="Center" Margin="5,5,5,5"
+                              Unchecked="Partial_Unchecked" Checked="Partial_Checked"/>
+                    <Button Content="Очистить" Margin="5,5,5,5" Click="ClearButton_Click"/>
+                </StackPanel>
+                <ComboBox x:Name="MicrophonesComboBox" Text="Выбери микрофон" Margin="5,5,5,5"
+                      SelectionChanged="MicrophonesComboBox_SelectionChanged"/>
+                <TextBlock x:Name="RecognitionText" HorizontalAlignment="Left" TextAlignment="Left" Margin="5,5,5,5"
+                     TextWrapping="Wrap" Text="Распозналось:"/>
+            </StackPanel>
+        </DockPanel>
+    </Grid>
+</Window>

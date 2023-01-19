@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>resources/UndoNormal.png</file>
+        <file>resources/ClearNormal.png</file>
+    </qresource>
+</RCC>
